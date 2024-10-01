@@ -3,11 +3,10 @@ import features_icon1 from "../assets/images/features_icon1.png";
 import features_icon2 from "../assets/images/features_icon2.png";
 import features_icon3 from "../assets/images/features_icon3.png";
 import digit_screen from "../assets/images/digit_token_screen.png";
-
 function FeaturesSection() {
   return (
     <section className="px-5 flex flex-col gap-20 items-center">
-      <div className="max-w-[29.5rem] flex flex-col items-center gap-6 py-6 text-center">
+      <div className="max-w-[29.5rem] flex flex-col items-center gap-6 py-6 text-center bg-[url('./assets/images/light.png')] bg-cover bg-center">
         <h2 className="font-medium text-5xl leading-[3.625rem]">
           Features that
           <br className="max-sm:hidden" /> work for your

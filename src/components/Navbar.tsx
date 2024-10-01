@@ -15,7 +15,7 @@ function NavBar(){
                     <NavItem>About us</NavItem>
                 </ul>
             </nav>
-            <button className="px-5 py-2 bg-white text-black rounded-[3.25rem] max-sm:text-xs">
+            <button className="px-5 py-2 bg-white text-black rounded-[3.25rem] max-sm:text-xs transition-all hover:bg-[#c9c9c9]">
                 Download the app
             </button>
             
