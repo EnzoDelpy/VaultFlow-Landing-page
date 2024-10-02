@@ -5,7 +5,7 @@ import { riseDownWithFade, riseUpWithFade } from "../utils/animations";
 function Hero() {
   return (
     <motion.section
-      className="bg-[url('./assets/images/background.png')] bg-repeat-x bg-top flex justify-center"
+      className="bg-[url('/assets/images/background.png')] bg-repeat-x bg-top flex justify-center"
       initial="initial"
       animate="animate"
     >
