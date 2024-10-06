@@ -1,9 +1,13 @@
+import { motion } from "framer-motion";
+import { appearOnScroll } from "../utils/animations";
+
 interface Props {
   title: string;
   paragraph: string;
   clickLabel: string;
   icon: JSX.Element;
   image?: JSX.Element;
+  custom?: number;
 }
 
 function FeaturesCard({
@@ -11,7 +15,8 @@ function FeaturesCard({
   paragraph,
   clickLabel,
   icon,
-  image
+  image,
+  custom,
 }: Props) {
   var defaultCard: JSX.Element = (
     <>
@@ -32,11 +37,30 @@ function FeaturesCard({
   return (
     <>
       {image ? (
-        <div className="rounded-[1.25rem] p-[3.75rem] flex-1 shadow-[0px_0.5px_0px_0px_rgba(255,_255,_255,_0.5)_inset,_0px_-2px_40px_0px_rgba(187,_155,_255,_0.15),_0px_-2px_10px_0px_rgba(233,_223,_255,_0.3)] flex gap-4 justify-between items-center max-lg:flex-col"><div className="flex flex-col gap-4 max-w-[28.75rem] flex-1">{defaultCard}</div><div className="max-w-[28.75rem] flex-1 h-min">{image}</div></div>
+        <motion.div
+          className="rounded-[1.25rem] p-[3.75rem] flex-1 shadow-[0px_0.5px_0px_0px_rgba(255,_255,_255,_0.5)_inset,_0px_-2px_40px_0px_rgba(187,_155,_255,_0.15),_0px_-2px_10px_0px_rgba(233,_223,_255,_0.3)] flex gap-4 justify-between items-center max-lg:flex-col"
+          initial="initial"
+          whileInView="animate"
+          variants={appearOnScroll}
+          viewport={{ margin: "-100px", once: true }}
+          custom={custom}
+        >
+          <div className="flex flex-col gap-4 max-w-[28.75rem] flex-1">
+            {defaultCard}
+          </div>
+          $<div className="max-w-[28.75rem] flex-1 h-min">{image}</div>
+        </motion.div>
       ) : (
-        <div className="rounded-[1.25rem] p-[3.75rem] flex flex-col gap-4 flex-1 shadow-[0px_0.5px_0px_0px_rgba(255,_255,_255,_0.5)_inset,_0px_-2px_40px_0px_rgba(187,_155,_255,_0.15),_0px_-2px_10px_0px_rgba(233,_223,_255,_0.3)]">
+        <motion.div
+          className="rounded-[1.25rem] p-[3.75rem] flex flex-col gap-4 flex-1 shadow-[0px_0.5px_0px_0px_rgba(255,_255,_255,_0.5)_inset,_0px_-2px_40px_0px_rgba(187,_155,_255,_0.15),_0px_-2px_10px_0px_rgba(233,_223,_255,_0.3)]"
+          initial="initial"
+          whileInView="animate"
+          variants={appearOnScroll}
+          viewport={{ margin: "-100px", once: true }}
+          custom={custom}
+        >
           {defaultCard}
-        </div>
+        </motion.div>
       )}
     </>
   );

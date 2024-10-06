@@ -29,3 +29,18 @@ export const riseUpWithFade = {
     },
   }),
 };
+
+export const appearOnScroll = {
+  initial: {
+    opacity: 0,
+    y: -10,
+  },
+  animate: (custom: number = 0) => ({
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 0.4,
+      delay: custom * 0.1,
+    },
+  }),
+};

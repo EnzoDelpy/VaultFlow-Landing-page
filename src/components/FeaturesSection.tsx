@@ -3,9 +3,11 @@ import features_icon1 from "../assets/images/features_icon1.png";
 import features_icon2 from "../assets/images/features_icon2.png";
 import features_icon3 from "../assets/images/features_icon3.png";
 import digit_screen from "../assets/images/digit_token_screen.png";
+import { motion } from "framer-motion";
+
 function FeaturesSection() {
   return (
-    <section className="px-5 flex flex-col gap-20 items-center">
+    <motion.section className="px-5 flex flex-col gap-20 items-center">
       <div className="max-w-[29.5rem] flex flex-col items-center gap-6 py-6 text-center bg-[url('/assets/images/light.png')] bg-cover bg-center">
         <h2 className="font-medium text-5xl leading-[3.625rem]">
           Features that
@@ -42,6 +44,7 @@ function FeaturesSection() {
                 className="h-[3.125rem] w-[3.125rem] shadow-[0px_0px_36.45px_0px_rgba(149,_37,_201,_0.75);] rounded-lg"
               />
             }
+            custom={2}
           ></FeaturesCard>
         </div>
         <FeaturesCard
@@ -64,7 +67,7 @@ function FeaturesSection() {
           }
         ></FeaturesCard>
       </div>
-    </section>
+    </motion.section>
   );
 }
 
