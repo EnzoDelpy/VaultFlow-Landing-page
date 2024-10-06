@@ -51,7 +51,7 @@ function Hero() {
         <motion.img
           src={hero_screen}
           alt="Screen of the dashboard product's"
-          className="rounded-3xl shadow-[0px_-2px_40px_0px_#BB9BFF26,_0px_-2px_10px_0px_#E9DFFF4D,_0px_0.5px_0px_0px_#FFFFFF80_inset;]"
+          className="rounded-3xl shadow-[0px_-2px_40px_0px_#BB9BFF26,_0px_-2px_10px_0px_#E9DFFF4D,_0px_0.5px_0px_0px_#FFFFFF80_inset;] aspect-[960_/_472.5]"
           variants={riseUpWithFade}
           custom={4}
         />
